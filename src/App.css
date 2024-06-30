@@ -24,7 +24,7 @@
 .login-box {
   position: absolute;
   left: 50%;
-  top: 130px;
+  top: 100px;
   transform: translateX(-50%);
   background-color: #17d4c8;
   padding: 15px 50px;
@@ -48,4 +48,17 @@
 
 .custom-placeholder::placeholder {
   color: white;
+}
+
+.signup-box {
+  position: absolute;
+  left: 50%;
+  top: 70px;
+  transform: translateX(-50%);
+  background-color: #17d4c8;
+  padding: 15px 50px;
+  color: rgb(0, 0, 0);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-size: 18px;
 }
