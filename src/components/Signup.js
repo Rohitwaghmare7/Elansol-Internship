@@ -30,12 +30,10 @@ function Signup() {
     const onSubmit = async e => {
         e.preventDefault();
 
-        // Check if password is at least 5 characters
         if (password.length < 5) {
             alert("Password must be at least 5 characters long.");
             return;
         }
-
         try {
             const config = {
                 headers: {
@@ -52,16 +50,15 @@ function Signup() {
                 localStorage.setItem("token", response.data.authToken);
                 history("/dashboard");
             } else {
-                // Handle specific errors here
+
                 if (response.data.errors) {
                     response.data.errors.forEach(error => {
                         if (error.location === 'body' && error.path === 'password' && error.type === 'field') {
-                            alert(error.msg); // Alert the specific error message for password
+                            alert(error.msg); 
                         }
-                        // Add more conditions for other fields if needed
                     });
                 } else {
-                    alert("Registration failed. Please try again."); // Generic error message
+                    alert("Registration failed. Please try again."); 
                 }
             }
             
